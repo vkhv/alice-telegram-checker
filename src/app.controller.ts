@@ -1,6 +1,7 @@
 import { Controller, Post, Req, Res } from '@nestjs/common';
 import { AppService } from './app.service';
 import { json, send } from 'micro';
+// messages.getUnreadMentions
 
 @Controller()
 export class AppController {
@@ -9,6 +10,6 @@ export class AppController {
   @Post()
   async getHello(@Req() req: Request) {
     console.log(req)
-    return {...req.body,  response: {text: 'Привет мир'},}
+    return {...req.body,  response: {text: 'У вас нет непрочитанных сообщений'},}
   }
 }

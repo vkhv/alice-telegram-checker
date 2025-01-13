@@ -11,10 +11,10 @@ export class AppController {
     console.log(req, res)
     return {
       version: 1,
-      session: req.session,
+      // session: req.session,
       response: {
         text: 'test',
-        end_session: req.end_session
+        // end_session: req.end_session
       }
     }
   }

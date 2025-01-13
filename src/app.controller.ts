@@ -9,6 +9,6 @@ export class AppController {
   @Post()
   async getHello(@Req() req: Request) {
     console.log(req)
-    return req.body;
+    return {...req.body,  response: 'Привет мир'}
   }
 }
